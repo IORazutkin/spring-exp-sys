@@ -26,4 +26,12 @@ public class Patient {
 
   @Column
   private String omsNum;
+
+  @Override
+  public String toString () {
+    return String.format(
+      "patient(%d, '%s', '%s', '%s', '%s', '%s').\n",
+      id, fullName, birthDate.toString(), pasNum, snilsNum, omsNum
+    );
+  }
 }
